@@ -32,7 +32,7 @@ const FeaturesSection = () => {
         className="max-w-7xl mx-auto"
       >
         < div className="mb-12 text-center space-y-4">
-       <h1 className="text-4xl md:text-6xl font-extrabold text-center bg-gradient-to-br from-yellow-400 via-yellow-100 to-yellow-400 text-transparent bg-clip-text drop-shadow-[0_5px_10px_rgba(255,255,0,0.4)]">
+       <h1 className="text-4xl md:text-6xl font-extrabold text-center text-yellow-300 ">
       
             Our Services
           </h1>

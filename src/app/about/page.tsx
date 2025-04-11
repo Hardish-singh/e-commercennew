@@ -76,9 +76,9 @@ Discover. Inspire. Express.`,
               // opacity: [0.5, 3, 0.5],
             }}
             transition={{ repeat: Infinity, duration: 3 }}
-            className="text-4xl md:text-6xl font-extrabold text-center bg-gradient-to-br from-yellow-400 via-yellow-100 to-yellow-400 text-transparent bg-clip-text drop-shadow-[0_5px_10px_rgba(255,255,0,0.4)]"
+            className="text-4xl md:text-6xl font-extrabold text-center text-yellow-300"
           />
-          <h1 className="text-4xl md:text-6xl font-extrabold text-center bg-gradient-to-br from-yellow-400 via-yellow-100 to-yellow-400 text-transparent bg-clip-text drop-shadow-[0_5px_10px_rgba(255,255,0,0.4)]">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-center text-yellow-300">
             Welcome to The Hidden Stuff
           </h1>
         </motion.div>
@@ -100,7 +100,7 @@ Discover. Inspire. Express.`,
             viewport={{ once: true, margin: "-100px" }}
             className="relative group"
           >
-           <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-[#6b9d44] rounded-3xl blur opacity-30 group-hover:opacity-50 transition-all duration-300" />
+           <div className="absolute inset-0 text-yellow-300 rounded-3xl blur opacity-30 group-hover:opacity-50 transition-all duration-300" />
             <div className="relative h-96 rounded-3xl overflow-hidden  ">
               <Image
                 src="/found.webp"
@@ -125,9 +125,9 @@ Discover. Inspire. Express.`,
                 variants={iconVariants}
                 className="p-4  rounded-full border-2 border-yellow-400/50"
               >
-                <User2Icon className="text-yellow-400 w-8 h-8" />
+                <User2Icon className="text-yellow-300 w-8 h-8" />
               </motion.div>
-              <h2 className="text-2xl md:text-5xl font-extrabold text-center bg-gradient-to-br from-yellow-400 via-yellow-100 to-yellow-400 text-transparent bg-clip-text drop-shadow-[0_5px_10px_rgba(255,255,0,0.4)]">
+              <h2 className="text-2xl md:text-5xl font-extrabold text-center text-yellow-300">
                 Meet the Founder
               </h2>
             </div>
@@ -146,7 +146,7 @@ Discover. Inspire. Express.`,
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-2xl md:text-5xl mb-3 font-extrabold text-center bg-gradient-to-br from-yellow-400 via-yellow-100 to-yellow-400 text-transparent bg-clip-text drop-shadow-[0_5px_10px_rgba(255,255,0,0.4)]"
+          className="text-2xl md:text-5xl mb-3 font-extrabold text-center text-yellow-300"
         >
           Our Journey
         </motion.h1>
@@ -275,7 +275,7 @@ Discover. Inspire. Express.`,
               }}
               className="h-1  bg-gradient-to-br from-yellow-400 via-yellow-100 to-yellow-400"
             />
-            <h2 className="text-4xl font-bold mt-4  bg-gradient-to-br from-yellow-400 via-yellow-100 to-yellow-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold mt-4  text-yellow-300 bg-clip-text ">
               Our Mission
             </h2>
           </div>

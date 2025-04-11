@@ -28,7 +28,7 @@ const About = () => {
       
     
       <motion.h1
-        className="text-4xl md:text-6xl font-extrabold text-center bg-gradient-to-br from-yellow-400 via-yellow-100 to-yellow-400 text-transparent bg-clip-text drop-shadow-[0_5px_10px_rgba(255,255,0,0.4)]"
+        className="text-4xl md:text-6xl font-extrabold text-center text-yellow-300"
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1 }}
