@@ -1,57 +1,178 @@
-import React from 'react'
-import Image from 'next/image'
+'use client';
+import React, { useState } from 'react';
+import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const features = [
+  {
+    id: 1,
+    bgimageUrl: '/luffy2.jpg',
+    mainimageUrl: '/img1.png',
+    title: 'Luffy',
+    coltitle: 'Oversized',
+    desc: 'This Luffy oversized T-shirt is extraordinary – the best fit you’ll find.',
+  },
+  {
+    id: 2,
+    bgimageUrl: '/skelton.jpg',
+    mainimageUrl: '/img2.png',
+    title: 'Hysteria',
+    coltitle: 'Oversized',
+    desc: 'Get the Zoro vibe with this razor-sharp design.',
+  },
+];
 
 const Hero = () => {
-  return (
-    <div className="relative w-full h-screen overflow-x-hidden">
-      {/* Background image */}
-      <Image
-        src="/luffy2.jpg"
-        alt="Hero Image"
-        fill
-        className="object-cover"
-        priority
-      />
+  const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(0);
 
-      {/* T-shirt image: visible only on desktop/tablet */}
-      <div className="absolute top-14 left-20 hidden md:block z-10">
-        <Image
-          src="/img1.png"
-          alt="T-shirt"
-          width={300}
-          height={500}
-          className="object-contain"
-        />
+  const nextSlide = () => {
+    setDirection(1);
+    setCurrent((prev) => (prev + 1) % features.length);
+  };
+
+  const prevSlide = () => {
+    setDirection(-1);
+    setCurrent((prev) => (prev - 1 + features.length) % features.length);
+  };
+
+  const { bgimageUrl, mainimageUrl, title, coltitle, desc } = features[current];
+  const isLuffy = current === 0;
+
+  const slideVariants = {
+    enter: (custom: number) => ({
+      x: custom > 0 ? 500 : -500,
+      y: 80,
+      opacity: 0,
+      rotate: custom > 0 ? 15 : -15,
+    }),
+    center: {
+      x: 0,
+      y: 0,
+      opacity: 1,
+      rotate: 0,
+      transition: { duration: 0.4, ease: 'easeOut' },
+    },
+    exit: (custom: number) => ({
+      x: custom < 0 ? 500 : -500,
+      y: 80,
+      opacity: 0,
+      rotate: custom < 0 ? 15 : -15,
+      transition: { duration: 0.4, ease: 'easeInOut' },
+    }),
+  };
+
+  const bgVariants = {
+    initial: { opacity: 0, scale: 1.05 },
+    animate: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: 'easeInOut' } },
+    exit: { opacity: 0, scale: 1.05, transition: { duration: 0.6, ease: 'easeInOut' } },
+  };
+
+  return (
+    <div className="relative w-full h-screen overflow-hidden">
+      {/* Smooth Background Image Transition */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={bgimageUrl}
+          className="absolute inset-0 z-0"
+          variants={bgVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+        >
+          <Image
+            src={bgimageUrl}
+            alt="Hero Background"
+            fill
+            className="object-cover"
+            priority
+          />
+        </motion.div>
+      </AnimatePresence>
+
+      <AnimatePresence mode="wait" custom={direction}>
+        <motion.div
+          key={current}
+          custom={direction}
+          variants={slideVariants}
+          initial="enter"
+          animate="center"
+          exit="exit"
+          className="absolute inset-0"
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          onDragEnd={(e, info) => {
+            if (info.offset.x > 100) {
+              prevSlide();
+            } else if (info.offset.x < -100) {
+              nextSlide();
+            }
+          }}
+        >
+          {/* Desktop Image */}
+          <div className={`absolute top-14 ${isLuffy ? 'left-20' : 'left-[65%]'} hidden md:block z-10`}>
+            <Image
+              src={mainimageUrl}
+              alt="T-shirt"
+              width={300}
+              height={500}
+              className="object-contain"
+            />
+          </div>
+
+          {/* Mobile Image */}
+          <div className="absolute top-[50px] left-1/2 transform -translate-x-1/2 flex justify-center md:hidden z-10 w-[90vw] max-w-[620px]">
+            <Image
+              src={mainimageUrl}
+              alt="T-shirt"
+              width={350}
+              height={420}
+              className="object-contain"
+            />
+          </div>
+
+          {/* Text Block */}
+          <div
+            className={`absolute z-20 px-3 w-full flex flex-col items-center text-center
+              md:items-start md:text-left 
+              ${isLuffy ? 'md:left-[6%]' : 'md:left-[60%]'} 
+              top-[60%] md:top-[340px] transition-all duration-300`}
+          >
+            <h1 className="text-3xl md:text-5xl font-bold text-white drop-shadow">
+              {title}{' '}
+              <span className="text-yellow-400 italic">{coltitle}</span>
+            </h1>
+            <div className="text-lg md:text-3xl font-bold text-white mt-1">T-shirts</div>
+            <p className="text-sm md:text-base text-white font-medium mt-2 max-w-[300px] md:max-w-sm">
+              {desc}
+            </p>
+            <button className="px-6 py-2 rounded-2xl bg-yellow-400 text-white font-semibold text-base md:text-lg mt-4">
+              View
+            </button>
+          </div>
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Carousel Buttons (Desktop Only) */}
+      <div className="absolute bottom-8 md:bottom-auto md:top-1/2 left-0 md:left-8 transform md:-translate-y-1/2 z-30 hidden md:block">
+        <button
+          onClick={prevSlide}
+          className="text-white font-bold bg-black/40 hover:bg-black/60 transition px-4 py-2 rounded-full"
+        >
+          ◀
+        </button>
       </div>
 
-      {/* Mobile T-shirt image */}
-      <div className="absolute top-[50px] left-1/2 flex justify-center transform -translate-x-1/2 md:hidden z-10 w-[90vw] max-w-[620px]">
-  <Image
-    src="/img1.png"
-    alt="T-shirt"
-    width={350}
-    height={400}
-    className="object-contain"
-  />
-</div>
-
-
-
-      {/* Text block */}
-      <div className="absolute  z-20 px-3 w-full flex flex-col items-center md:items-start text-center md:text-left top-[60%] md:top-[340px] md:left-[6%]">
-        <h1 className="text-3xl md:text-5xl font-bold text-white drop-shadow">
-          Luffy <span className="text-yellow-400 italic">Oversized</span>
-        </h1>
-        <div className="text-lg md:text-3xl font-bold text-white mt-1">T-shirts</div>
-        <p className="text-sm md:text-base text-white font-medium mt-2 max-w-[300px] md:max-w-sm">
-          This Luffy oversized T-shirt is extraordinary – the best fit you’ll find.
-        </p>
-        <button className="px-6 py-2 rounded-2xl bg-yellow-400 text-white font-semibold text-base md:text-lg mt-4">
-          View
+      <div className="absolute bottom-8 md:bottom-auto md:top-1/2 right-0 md:right-8 transform md:-translate-y-1/2 z-30 hidden md:block">
+        <button
+          onClick={nextSlide}
+          className="text-white font-bold bg-black/40 hover:bg-black/60 transition px-4 py-2 rounded-full"
+        >
+          ▶
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
