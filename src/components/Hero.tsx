@@ -125,7 +125,7 @@ const Hero = () => {
 
           {/* Mobile Image */}
           <div className="absolute top-[50px] left-1/2 transform -translate-x-1/2 flex justify-center md:hidden z-10 w-[90vw] max-w-[620px]">
-            <Image src={mainimageUrl} alt="T-shirt" width={350} height={420} className="object-contain" />
+            <Image src={mainimageUrl} alt="T-shirt" width={370} height={450} className="object-contain" />
           </div>
 
           {/* Text Block */}
@@ -135,15 +135,15 @@ const Hero = () => {
               ${isLuffyLayout ? 'md:left-[6%]' : 'md:left-[60%]'} 
               top-[60%] md:top-[340px] transition-all duration-300`}
           >
-            <h1 className="text-3xl md:text-5xl font-bold text-white drop-shadow">
+            <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow">
               {title}{' '}
               <span className="text-yellow-400 italic">{coltitle}</span>
             </h1>
-            <div className="text-lg md:text-3xl font-bold text-white mt-1">T-shirts</div>
+            <div className="text-2xl md:text-3xl font-bold text-white mt-1">T-shirts</div>
             <p className="text-sm md:text-base text-white font-medium mt-2 max-w-[300px] md:max-w-sm">
               {desc}
             </p>
-            <button className="px-6 py-2 rounded-2xl bg-yellow-400 text-white font-semibold text-base md:text-lg mt-4">
+            <button className="px-6 py-2 rounded-2xl bg-yellow-400 text-white font-semibold text-base md:text-xl mt-4">
               View
             </button>
           </div>
