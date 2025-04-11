@@ -6,17 +6,17 @@ import { Shirt, Sparkles, SmilePlus, ArrowRight } from 'lucide-react';
 
 const features = [
   {
-    icon: <Shirt className="w-6 h-6 text-yellow-400" />,
+    icon: <Shirt className="w-6 h-6 text-[#84E12E]" />,
     title: 'Unique Streetwear',
     desc: 'Every piece is crafted with bold, underground fashion in mind.',
   },
   {
-    icon: <Sparkles className="w-6 h-6 text-yellow-400" />,
+    icon: <Sparkles className="w-6 h-6 text-[#84E12E]" />,
     title: 'High-End Quality',
     desc: 'Premium materials for lasting comfort and luxury feel.',
   },
   {
-    icon: <SmilePlus className="w-6 h-6 text-yellow-400" />,
+    icon: <SmilePlus className="w-6 h-6 text-[#84E12E]" />,
     title: 'Designed for Rebels',
     desc: 'Style made for those who don’t follow trends—they make them.',
   },
@@ -28,7 +28,7 @@ const About = () => {
       
     
       <motion.h1
-        className="text-4xl md:text-6xl font-extrabold text-center text-yellow-300"
+        className="text-4xl md:text-6xl font-extrabold text-center text-[#8FC028]"
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1 }}
@@ -52,14 +52,14 @@ const About = () => {
         {features.map((feat, i) => (
           <motion.div
             key={i}
-            className="bg-[#1a1a1a] border border-yellow-500 rounded-2xl p-6 flex flex-col items-center text-center shadow-lg"
+            className="bg-[#1a1a1a] border border-[#84E12E] rounded-2xl p-6 flex flex-col items-center text-center shadow-lg"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.2, duration: 0.6 }}
             viewport={{ once: true }}
           >
             <div className="mb-4">{feat.icon}</div>
-            <h3 className="font-semibold text-lg text-yellow-400">{feat.title}</h3>
+            <h3 className="font-semibold text-lg text-[#8FC028]">{feat.title}</h3>
             <p className="text-sm text-gray-400 mt-2">{feat.desc}</p>
           </motion.div>
         ))}
@@ -67,7 +67,7 @@ const About = () => {
 
    
       <motion.button
-        className="mt-12 bg-yellow-400 hover:bg-yellow-300 text-black font-semibold px-6 py-3 rounded-full flex items-center gap-2 transition-all"
+        className="mt-12 bg-[#7DC23B] hover:bg-[#84E12E] text-black font-semibold px-6 py-3 rounded-full flex items-center gap-2 transition-all"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >

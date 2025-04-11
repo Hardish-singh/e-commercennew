@@ -38,7 +38,7 @@ const ContactPage = () => {
           transition={{ duration: 0.8 }}
           className="pt-16 pb-12 text-center"
         >
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl font-bold  bg-clip-text text-[#8FC028]">
             Get In Touch
           </h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg opacity-90">
@@ -55,7 +55,7 @@ const ContactPage = () => {
         >
           {/* Contact Form */}
           <motion.div variants={itemVariants} className="space-y-6">
-            <h2 className="text-2xl font-bold text-yellow-400">Send Us a Message</h2>
+            <h2 className="text-2xl font-bold text-[#8FC028]">Send Us a Message</h2>
             
             <form className="space-y-6">
               <div className="space-y-2">
@@ -91,7 +91,7 @@ const ContactPage = () => {
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 text-black font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-yellow-500/30 transition-all"
+                className="w-full text-black bg-[#7DC23B] font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-yellow-500/30 transition-all"
                 type="submit"
               >
                 Send Message
@@ -101,7 +101,7 @@ const ContactPage = () => {
 
        
           <motion.div variants={itemVariants} className="space-y-8">
-            <h2 className="text-2xl font-bold text-yellow-400">Contact Information</h2>
+            <h2 className="text-2xl font-bold text-[#8FC028]">Contact Information</h2>
             
             <div className="space-y-6">
               {/* Email */}
@@ -110,10 +110,10 @@ const ContactPage = () => {
                 className="flex items-start gap-4"
               >
                 <div className="p-2 bg-gray-900 rounded-full">
-                  <Mail className="h-5 w-5 text-yellow-400" />
+                  <Mail className="h-5 w-5 text-[#84E12E]" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-yellow-400">Email</h3>
+                  <h3 className="font-medium text-[#8FC028]">Email</h3>
                   <p className="text-gray-300">contact@thehiddenstuff.com</p>
                 </div>
               </motion.div>
@@ -124,10 +124,10 @@ const ContactPage = () => {
                 className="flex items-start gap-4"
               >
                 <div className="p-2 bg-gray-900 rounded-full">
-                  <Phone className="h-5 w-5 text-yellow-400" />
+                  <Phone className="h-5 w-5 text-[#84E12E]" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-yellow-400">Phone</h3>
+                  <h3 className="font-medium text-[#8FC028]">Phone</h3>
                   <p className="text-gray-300">+1 (555) 123-4567</p>
                 </div>
               </motion.div>
@@ -138,10 +138,10 @@ const ContactPage = () => {
                 className="flex items-start gap-4"
               >
                 <div className="p-2 bg-gray-900 rounded-full">
-                  <MapPin className="h-5 w-5 text-yellow-400" />
+                  <MapPin className="h-5 w-5 text-[#84E12E]" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-yellow-400">Address</h3>
+                  <h3 className="font-medium text-[#8FC028]">Address</h3>
                   <p className="text-gray-300">123 Fashion Street</p>
                   <p className="text-gray-300">Ranchi, Jarkhand 10001</p>
                 </div>
@@ -150,7 +150,7 @@ const ContactPage = () => {
             
             {/* Social Media */}
             <div className="pt-4">
-              <h3 className="text-lg font-medium text-yellow-400 mb-4">Follow Us</h3>
+              <h3 className="text-lg font-medium text-[#8FC028] mb-4">Follow Us</h3>
               <div className="flex gap-4">
                 {['Instagram', 'Twitter', 'Facebook'].map((social) => (
                   <motion.a

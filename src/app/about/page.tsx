@@ -76,9 +76,9 @@ Discover. Inspire. Express.`,
               // opacity: [0.5, 3, 0.5],
             }}
             transition={{ repeat: Infinity, duration: 3 }}
-            className="text-4xl md:text-6xl font-extrabold text-center text-yellow-300"
+            className="text-4xl md:text-6xl font-extrabold text-center text-[#8FC028]"
           />
-          <h1 className="text-4xl md:text-6xl font-extrabold text-center text-yellow-300">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-center text-[#8FC028]">
             Welcome to The Hidden Stuff
           </h1>
         </motion.div>
@@ -100,8 +100,8 @@ Discover. Inspire. Express.`,
             viewport={{ once: true, margin: "-100px" }}
             className="relative group"
           >
-           <div className="absolute inset-0 text-yellow-300 rounded-3xl blur opacity-30 group-hover:opacity-50 transition-all duration-300" />
-            <div className="relative h-96 rounded-3xl overflow-hidden  ">
+           <div className="absolute inset-0 text-[#8FC028] rounded-3xl blur opacity-30 group-hover:opacity-50 transition-all duration-300" />
+            <div className="relative h-[600px] rounded-3xl overflow-hidden  ">
               <Image
                 src="/found.webp"
                 alt="Dr. Anjali Srivastava"
@@ -123,11 +123,11 @@ Discover. Inspire. Express.`,
               <motion.div
                 whileHover="hover"
                 variants={iconVariants}
-                className="p-4  rounded-full border-2 border-yellow-400/50"
+                className="p-4  rounded-full border-2 border-[#7DC23B]"
               >
-                <User2Icon className="text-yellow-300 w-8 h-8" />
+                <User2Icon className="text-[#84E12E] w-8 h-8" />
               </motion.div>
-              <h2 className="text-2xl md:text-5xl font-extrabold text-center text-yellow-300">
+              <h2 className="text-2xl md:text-5xl font-extrabold text-center text-[#8FC028]">
                 Meet the Founder
               </h2>
             </div>
@@ -146,7 +146,7 @@ Discover. Inspire. Express.`,
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-2xl md:text-5xl mb-3 font-extrabold text-center text-yellow-300"
+          className="text-2xl md:text-5xl mb-3 font-extrabold text-center text-[#8FC028]"
         >
           Our Journey
         </motion.h1>
@@ -155,7 +155,7 @@ Discover. Inspire. Express.`,
           {sections.map((section) => (
             <motion.div 
               key={section.id}
-              className="mb-8 rounded-3xl overflow-hidden border border-yellow-300 hover:border-cyan-400/50 transition-all"
+              className="mb-8 rounded-3xl overflow-hidden border border-[#7DC23B] hover:border-[#84E12E] transition-all"
               layout
             >
               <motion.div
@@ -167,7 +167,7 @@ Discover. Inspire. Express.`,
                   <div className="flex items-center gap-4">
                     <motion.div
                       whileHover={{ rotate: 10, scale: 1.1 }}
-                      className="p-3 text-amber-300 rounded-lg"
+                      className="p-3 text-[#84E12E] rounded-lg"
                     >
                       {section.icon}
                     </motion.div>
@@ -175,7 +175,7 @@ Discover. Inspire. Express.`,
                   </div>
                   <motion.div
                     animate={{ rotate: expandedSection === section.id ? 180 : 0 }}
-                    className="text-yellow-300"
+                    className="text-[#84E12E]"
                   >
                     <ChevronDown size={24} />
                   </motion.div>
@@ -229,29 +229,29 @@ Discover. Inspire. Express.`,
         >
           <motion.div 
             whileHover={{ y: -10 }}
-            className="p-6 bg-gray-400 rounded-2xl border border-yellow-300"
+            className="p-6 bg-[#1a1a1a] rounded-2xl border border-[#7DC23B]"
           >
-            <Shirt className="w-12 h-12 text-yellow-300 mb-4" />
+            <Shirt className="w-12 h-12 text-[#84E12E] mb-4" />
             <h3 className="text-xl font-semibold mb-2">Wearable Art</h3>
-            <p className="text-gray-800">Each piece tells a unique story through design</p>
+            <p className="text-gray-300">Each piece tells a unique story through design</p>
           </motion.div>
 
           <motion.div 
             whileHover={{ y: -10 }}
-            className="p-6 bg-gray-400 rounded-2xl border border-yellow-300"
+            className="p-6 bg-[#1a1a1a] rounded-2xl border border-[#7DC23B]"
           >
-            <Sparkles className="w-12 h-12 text-yellow-300 mb-4" />
+            <Sparkles className="w-12 h-12 text-[#84E12E] mb-4" />
             <h3 className="text-xl font-semibold mb-2">Premium Quality</h3>
-            <p className="text-gray-800">Crafted with care for lasting comfort</p>
+            <p className="text-gray-300">Crafted with care for lasting comfort</p>
           </motion.div>
 
           <motion.div 
             whileHover={{ y: -10 }}
-            className="p-6 bg-gray-400 rounded-2xl border border-yellow-300"
+            className="p-6 bg-[#1a1a1a] rounded-2xl border border-[#7DC23B]"
           >
-            <HeartHandshake className="w-12 h-12 text-yellow-300 mb-4" />
+            <HeartHandshake className="w-12 h-12 text-[#84E12E] mb-4" />
             <h3 className="text-xl font-semibold mb-2">Community First</h3>
-            <p className="text-gray-800">Join our movement of self-expression</p>
+            <p className="text-gray-300">Join our movement of self-expression</p>
           </motion.div>
         </motion.div>
       </div>
@@ -273,9 +273,9 @@ Discover. Inspire. Express.`,
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-              className="h-1  bg-gradient-to-br from-yellow-400 via-yellow-100 to-yellow-400"
+              className="h-1  bg-gradient-to-br from-[#7DC23B] via-[#9AF95D] to-[#8FC028]"
             />
-            <h2 className="text-4xl font-bold mt-4  text-yellow-300 bg-clip-text ">
+            <h2 className="text-4xl font-bold mt-4  text-[#8FC028] bg-clip-text ">
               Our Mission
             </h2>
           </div>

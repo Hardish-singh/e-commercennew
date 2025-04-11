@@ -137,15 +137,16 @@ const Hero = () => {
           >
             <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow">
               {title}{' '}
-              <span className="text-yellow-400 italic">{coltitle}</span>
+              <span className="text-[#8FC028] italic">{coltitle}</span>
             </h1>
             <div className="text-2xl md:text-3xl font-bold text-white mt-1">T-shirts</div>
             <p className="text-sm md:text-base text-white font-medium mt-2 max-w-[300px] md:max-w-sm">
               {desc}
             </p>
-            <button className="px-6 py-2 rounded-2xl bg-yellow-400 text-white font-semibold text-base md:text-xl mt-4">
-              View
-            </button>
+            <button className="w-full sm:w-50 md:w-40 px-7 py-4 rounded-2xl bg-[#7DC23B] text-white font-semibold text-base md:text-xl mt-4">
+  View
+</button>
+
           </div>
         </motion.div>
       </AnimatePresence>

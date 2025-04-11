@@ -7,17 +7,17 @@ import { Truck, RefreshCw, Headset } from "lucide-react";
 const FeaturesSection = () => {
   const features = [
     {
-      icon: <Truck className="w-12 h-12 text-yellow-400" />,
+      icon: <Truck className="w-12 h-12 text-[#84E12E]" />,
       title: "PAN INDIA FREE SHIPPING",
       description: "Free delivery across all Indian states with tracked shipping"
     },
     {
-      icon: <RefreshCw className="w-12 h-12 text-yellow-400" />,
+      icon: <RefreshCw className="w-12 h-12 text-[#84E12E]" />,
       title: "RETURNS AND EXCHANGES",
       description: "30-day hassle-free return and exchange policy"
     },
     {
-      icon: <Headset className="w-12 h-12 text-yellow-400" />,
+      icon: <Headset className="w-12 h-12 text-[#84E12E]" />,
       title: "24/7 CUSTOMER SUPPORT",
       description: "Round-the-clock assistance through chat, email, and phone"
     }
@@ -32,7 +32,7 @@ const FeaturesSection = () => {
         className="max-w-7xl mx-auto"
       >
         < div className="mb-12 text-center space-y-4">
-       <h1 className="text-4xl md:text-6xl font-extrabold text-center text-yellow-300 ">
+       <h1 className="text-4xl md:text-6xl font-extrabold text-center text-[#8FC028] ">
       
             Our Services
           </h1>
@@ -63,7 +63,7 @@ const FeaturesSection = () => {
                   </motion.div>
                   
                   <div className="space-y-4">
-                    <h3 className="text-xl font-semibold text-yellow-400">
+                    <h3 className="text-xl font-semibold text-[#8FC028]">
                       {feature.title}
                     </h3>
                     <p className="text-gray-300 leading-relaxed">
