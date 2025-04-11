@@ -47,13 +47,13 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 3000); // 2 seconds
+    }, 3000); 
 
-    return () => clearInterval(interval); // Clear interval on unmount
+    return () => clearInterval(interval); 
   }, [current]);
 
   const { bgimageUrl, mainimageUrl, title, coltitle, desc } = features[current];
-  const isLuffyLayout = current === 0 || current === 2; // use same layout for ID 3
+  const isLuffyLayout = current === 0 || current === 2; 
 
   const slideVariants = {
     enter: (custom: number) => ({

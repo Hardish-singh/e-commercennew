@@ -35,8 +35,8 @@ const Navbar = () => {
     setTimeout(() => {
       router.push(href);
       setTransitioning(false);
-      setShowProductDropdown(false); // close dropdown if open
-      setShowMobileMenu(false); // close mobile menu if open
+      setShowProductDropdown(false); 
+      setShowMobileMenu(false); 
     }, 900);
   };
 
@@ -134,7 +134,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Global animation styles */}
       <style jsx global>{`
         @keyframes slideLeft {
           0% {

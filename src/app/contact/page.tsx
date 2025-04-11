@@ -31,7 +31,7 @@ const ContactPage = () => {
       </Head>
       
       <div className="min-h-screen bg-black text-white">
-        {/* Animated Header */}
+       
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -99,7 +99,7 @@ const ContactPage = () => {
             </form>
           </motion.div>
 
-          {/* Contact Info */}
+       
           <motion.div variants={itemVariants} className="space-y-8">
             <h2 className="text-2xl font-bold text-yellow-400">Contact Information</h2>
             

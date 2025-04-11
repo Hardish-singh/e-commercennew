@@ -26,7 +26,7 @@ const About = () => {
   return (
     <section className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-6 py-16">
       
-      {/* 3D Animated Title */}
+    
       <motion.h1
         className="text-4xl md:text-6xl font-extrabold text-center bg-gradient-to-br from-yellow-400 via-yellow-100 to-yellow-400 text-transparent bg-clip-text drop-shadow-[0_5px_10px_rgba(255,255,0,0.4)]"
         initial={{ scale: 0.9, opacity: 0 }}
@@ -36,7 +36,7 @@ const About = () => {
         The Hidden Stuff
       </motion.h1>
 
-      {/* Subtitle */}
+     
       <motion.p
         className="text-gray-300 mt-4 text-center max-w-xl"
         initial={{ y: 20, opacity: 0 }}
@@ -65,7 +65,7 @@ const About = () => {
         ))}
       </div>
 
-      {/* Button */}
+   
       <motion.button
         className="mt-12 bg-yellow-400 hover:bg-yellow-300 text-black font-semibold px-6 py-3 rounded-full flex items-center gap-2 transition-all"
         whileHover={{ scale: 1.05 }}
