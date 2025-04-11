@@ -25,11 +25,11 @@ const Hero = () => {
       </div>
 
       {/* Mobile T-shirt image */}
-      <div className="absolute top-[50px] left-1/2 transform -translate-x-1/2 md:hidden z-10 w-[90vw] max-w-[620px]">
+      <div className="absolute top-[50px] left-1/2 flex justify-center transform -translate-x-1/2 md:hidden z-10 w-[90vw] max-w-[620px]">
   <Image
     src="/img1.png"
     alt="T-shirt"
-    width={300}
+    width={350}
     height={400}
     className="object-contain"
   />
@@ -38,8 +38,8 @@ const Hero = () => {
 
 
       {/* Text block */}
-      <div className="absolute mt-3 z-20 px-3 w-full flex flex-col items-center md:items-start text-center md:text-left top-[60%] md:top-[340px] md:left-[6%]">
-        <h1 className="text-2xl md:text-5xl font-bold text-white drop-shadow">
+      <div className="absolute  z-20 px-3 w-full flex flex-col items-center md:items-start text-center md:text-left top-[60%] md:top-[340px] md:left-[6%]">
+        <h1 className="text-3xl md:text-5xl font-bold text-white drop-shadow">
           Luffy <span className="text-yellow-400 italic">Oversized</span>
         </h1>
         <div className="text-lg md:text-3xl font-bold text-white mt-1">T-shirts</div>
