@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -20,6 +20,14 @@ const features = [
     coltitle: 'Oversized',
     desc: 'Get the Zoro vibe with this razor-sharp design.',
   },
+  {
+    id: 3,
+    bgimageUrl: '/skelton2.jpg',
+    mainimageUrl: '/img3.png',
+    title: 'Darkhorn',
+    coltitle: 'Oversized',
+    desc: 'Get the devil vibe with this Dark-horn design.',
+  },
 ];
 
 const Hero = () => {
@@ -36,8 +44,16 @@ const Hero = () => {
     setCurrent((prev) => (prev - 1 + features.length) % features.length);
   };
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 3000); // 2 seconds
+
+    return () => clearInterval(interval); // Clear interval on unmount
+  }, [current]);
+
   const { bgimageUrl, mainimageUrl, title, coltitle, desc } = features[current];
-  const isLuffy = current === 0;
+  const isLuffyLayout = current === 0 || current === 2; // use same layout for ID 3
 
   const slideVariants = {
     enter: (custom: number) => ({
@@ -70,7 +86,6 @@ const Hero = () => {
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
-      {/* Smooth Background Image Transition */}
       <AnimatePresence mode="wait">
         <motion.div
           key={bgimageUrl}
@@ -80,13 +95,7 @@ const Hero = () => {
           animate="animate"
           exit="exit"
         >
-          <Image
-            src={bgimageUrl}
-            alt="Hero Background"
-            fill
-            className="object-cover"
-            priority
-          />
+          <Image src={bgimageUrl} alt="Hero Background" fill className="object-cover" priority />
         </motion.div>
       </AnimatePresence>
 
@@ -110,32 +119,20 @@ const Hero = () => {
           }}
         >
           {/* Desktop Image */}
-          <div className={`absolute top-14 ${isLuffy ? 'left-20' : 'left-[65%]'} hidden md:block z-10`}>
-            <Image
-              src={mainimageUrl}
-              alt="T-shirt"
-              width={300}
-              height={500}
-              className="object-contain"
-            />
+          <div className={`absolute top-14 ${isLuffyLayout ? 'left-20' : 'left-[65%]'} hidden md:block z-10`}>
+            <Image src={mainimageUrl} alt="T-shirt" width={300} height={500} className="object-contain" />
           </div>
 
           {/* Mobile Image */}
           <div className="absolute top-[50px] left-1/2 transform -translate-x-1/2 flex justify-center md:hidden z-10 w-[90vw] max-w-[620px]">
-            <Image
-              src={mainimageUrl}
-              alt="T-shirt"
-              width={350}
-              height={420}
-              className="object-contain"
-            />
+            <Image src={mainimageUrl} alt="T-shirt" width={350} height={420} className="object-contain" />
           </div>
 
           {/* Text Block */}
           <div
             className={`absolute z-20 px-3 w-full flex flex-col items-center text-center
               md:items-start md:text-left 
-              ${isLuffy ? 'md:left-[6%]' : 'md:left-[60%]'} 
+              ${isLuffyLayout ? 'md:left-[6%]' : 'md:left-[60%]'} 
               top-[60%] md:top-[340px] transition-all duration-300`}
           >
             <h1 className="text-3xl md:text-5xl font-bold text-white drop-shadow">
