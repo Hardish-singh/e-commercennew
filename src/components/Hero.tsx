@@ -124,7 +124,7 @@ const Hero = () => {
           </div>
 
           {/* Mobile Image */}
-          <div className="absolute top-[60px] left-1/2 transform -translate-x-1/2 flex justify-center md:hidden z-10 w-[90vw] max-w-[620px]">
+          <div className="absolute top-[70px] left-1/2 transform -translate-x-1/2 flex justify-center md:hidden z-10 w-[90vw] max-w-[620px]">
             <Image src={mainimageUrl} alt="T-shirt" width={370} height={450} className="object-contain" />
           </div>
 
