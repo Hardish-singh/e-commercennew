@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Head from "next/head";
 import { Mail, MapPin, Phone } from "lucide-react";
+import Navbar from "@/components/Navbar";
 
 const ContactPage = () => {
   const containerVariants = {
@@ -26,6 +27,7 @@ const ContactPage = () => {
 
   return (
     <>
+    <Navbar/>
       <Head>
         <title>Contact Us</title>
       </Head>

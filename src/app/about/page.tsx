@@ -3,6 +3,7 @@ import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 import Image from "next/image";
 import { User2Icon, ChevronDown, Sparkles, PenLine, BookOpenText, Shirt, HeartHandshake } from "lucide-react";
 import { useState } from "react";
+import Navbar from "@/components/Navbar";
 
 const AboutPage = () => {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
@@ -58,6 +59,9 @@ Discover. Inspire. Express.`,
   ];
 
   return (
+    <div>
+
+    <Navbar/>
     <div className="min-h-screen bg-black text-white font-sans">
 
 <motion.section 
@@ -65,11 +69,11 @@ Discover. Inspire. Express.`,
         animate="visible"
         transition={{ staggerChildren: 0.2 }}
         className="container mx-auto px-4 py-20 text-center"
-      >
+        >
         <motion.div
           // variants={variants}
           className="relative inline-block mb-8"
-        >
+          >
           <motion.div
             animate={{
               // scale: [1, 1.05, 1],
@@ -77,7 +81,7 @@ Discover. Inspire. Express.`,
             }}
             transition={{ repeat: Infinity, duration: 3 }}
             className="text-4xl md:text-6xl font-extrabold text-center text-[#8FC028]"
-          />
+            />
           <h1 className="text-4xl md:text-6xl font-extrabold text-center text-[#8FC028]">
             Welcome to The Hidden Stuff
           </h1>
@@ -86,7 +90,7 @@ Discover. Inspire. Express.`,
         <motion.p
           variants={variants}
           className="text-xl md:text-2xl max-w-3xl mx-auto mt-8"
-        >
+          >
           Where stories become style and words transform into wearable art
         </motion.p>
       </motion.section>
@@ -99,7 +103,7 @@ Discover. Inspire. Express.`,
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             className="relative group"
-          >
+            >
            <div className="absolute inset-0 text-[#8FC028] rounded-3xl blur opacity-30 group-hover:opacity-50 transition-all duration-300" />
             <div className="relative h-[600px] rounded-3xl overflow-hidden  ">
               <Image
@@ -110,7 +114,7 @@ Discover. Inspire. Express.`,
                 quality={100}
                 placeholder="blur"
                 blurDataURL="/placeholder-founders.jpg"
-              />
+                />
             </div>
           </motion.div>
 
@@ -118,13 +122,13 @@ Discover. Inspire. Express.`,
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-          >
+            >
             <div className="flex items-center gap-4 mb-6">
               <motion.div
                 whileHover="hover"
                 variants={iconVariants}
                 className="p-4  rounded-full border-2 border-[#7DC23B]"
-              >
+                >
                 <User2Icon className="text-[#84E12E] w-8 h-8" />
               </motion.div>
               <h2 className="text-2xl md:text-5xl font-extrabold text-center text-[#8FC028]">
@@ -147,28 +151,28 @@ Discover. Inspire. Express.`,
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-2xl md:text-5xl mb-3 font-extrabold text-center text-[#8FC028]"
-        >
+          >
           Our Journey
         </motion.h1>
 
         <LayoutGroup>
           {sections.map((section) => (
             <motion.div 
-              key={section.id}
-              className="mb-8 rounded-3xl overflow-hidden border border-[#7DC23B] hover:border-[#84E12E] transition-all"
-              layout
+            key={section.id}
+            className="mb-8 rounded-3xl overflow-hidden border border-[#7DC23B] hover:border-[#84E12E] transition-all"
+            layout
             >
               <motion.div
                 className="p-6 md:p-8 cursor-pointer"
                 onClick={() => setExpandedSection(expandedSection === section.id ? null : section.id)}
                 layout
-              >
+                >
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex items-center gap-4">
                     <motion.div
                       whileHover={{ rotate: 10, scale: 1.1 }}
                       className="p-3 text-[#84E12E] rounded-lg"
-                    >
+                      >
                       {section.icon}
                     </motion.div>
                     <h2 className="text-xl md:text-2xl font-semibold">{section.title}</h2>
@@ -176,7 +180,7 @@ Discover. Inspire. Express.`,
                   <motion.div
                     animate={{ rotate: expandedSection === section.id ? 180 : 0 }}
                     className="text-[#84E12E]"
-                  >
+                    >
                     <ChevronDown size={24} />
                   </motion.div>
                 </div>
@@ -185,31 +189,31 @@ Discover. Inspire. Express.`,
               <AnimatePresence>
                 {expandedSection === section.id && (
                   <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    className="overflow-hidden"
-                    layout
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  className="overflow-hidden"
+                  layout
                   >
                     <div className="grid md:grid-cols-2 gap-8 p-6 md:p-8">
                       <motion.div
                         initial={{ scale: 0.95 }}
                         animate={{ scale: 1 }}
                         className="relative h-64 md:h-80 rounded-2xl overflow-hidden"
-                      >
+                        >
                         <Image
                           src={section.image}
                           alt={section.title}
                           fill
                           className="object-fit"
                           sizes="(max-width: 768px) 100vw, 50vw "
-                        />
+                          />
                       </motion.div>
                       <motion.p
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         className="text-gray-300 text-lg md:text-xl leading-relaxed"
-                      >
+                        >
                         {section.content}
                       </motion.p>
                     </div>
@@ -226,11 +230,11 @@ Discover. Inspire. Express.`,
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-100px" }}
-        >
+          >
           <motion.div 
             whileHover={{ y: -10 }}
             className="p-6 bg-[#1a1a1a] rounded-2xl border border-[#7DC23B]"
-          >
+            >
             <Shirt className="w-12 h-12 text-[#84E12E] mb-4" />
             <h3 className="text-xl font-semibold mb-2">Wearable Art</h3>
             <p className="text-gray-300">Each piece tells a unique story through design</p>
@@ -239,7 +243,7 @@ Discover. Inspire. Express.`,
           <motion.div 
             whileHover={{ y: -10 }}
             className="p-6 bg-[#1a1a1a] rounded-2xl border border-[#7DC23B]"
-          >
+            >
             <Sparkles className="w-12 h-12 text-[#84E12E] mb-4" />
             <h3 className="text-xl font-semibold mb-2">Premium Quality</h3>
             <p className="text-gray-300">Crafted with care for lasting comfort</p>
@@ -248,7 +252,7 @@ Discover. Inspire. Express.`,
           <motion.div 
             whileHover={{ y: -10 }}
             className="p-6 bg-[#1a1a1a] rounded-2xl border border-[#7DC23B]"
-          >
+            >
             <HeartHandshake className="w-12 h-12 text-[#84E12E] mb-4" />
             <h3 className="text-xl font-semibold mb-2">Community First</h3>
             <p className="text-gray-300">Join our movement of self-expression</p>
@@ -261,7 +265,7 @@ Discover. Inspire. Express.`,
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-100px" }}
           className="text-center max-w-4xl mx-auto"
-        >
+          >
           <div className="inline-block mb-8">
             <motion.div
               animate={{
@@ -274,7 +278,7 @@ Discover. Inspire. Express.`,
                 ease: "easeInOut"
               }}
               className="h-1  bg-gradient-to-br from-[#7DC23B] via-[#9AF95D] to-[#8FC028]"
-            />
+              />
             <h2 className="text-4xl font-bold mt-4  text-[#8FC028] bg-clip-text ">
               Our Mission
             </h2>
@@ -286,6 +290,7 @@ Discover. Inspire. Express.`,
         </motion.div>
       </section>
     </div>
+              </div>
   );
 };
 

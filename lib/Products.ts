@@ -29,7 +29,8 @@ interface Product {
         name: 'Air Cocoon',
         collection: 'Weekend Collection',
         price: '₹37,000',
-        img: '/product2.jpg',
+        img: '/product6.png',
+        color: '#d9ad89',
         rating: 4.5
       },
       {
@@ -46,7 +47,8 @@ interface Product {
         name: 'Air Cocoon',
         collection: 'Weekend Collection',
         price: '₹37,000',
-        img: '/product2.jpg',
+        img: '/product6.png',
+        color: '#d9ad89',
         rating: 4.5
       },
       {
@@ -63,7 +65,8 @@ interface Product {
         name: 'Air Cocoon',
         collection: 'Weekend Collection',
         price: '₹37,000',
-        img: '/product2.jpg',
+        img: '/product6.png',
+        color: '#d9ad89',
         rating: 4.5
       },
       {
@@ -80,7 +83,8 @@ interface Product {
         name: 'Air Cocoon',
         collection: 'Weekend Collection',
         price: '₹37,000',
-        img: '/product2.jpg',
+        img: '/product6.png',
+        color: '#d9ad89',
         rating: 4.5
       },
       {
@@ -97,7 +101,8 @@ interface Product {
         name: 'Air Cocoon',
         collection: 'Weekend Collection',
         price: '₹37,000',
-        img: '/product2.jpg',
+        img: '/product6.png',
+        color: '#d9ad89',
         rating: 4.5
       },
       {
@@ -114,7 +119,8 @@ interface Product {
         name: 'Air Cocoon',
         collection: 'Weekend Collection',
         price: '₹37,000',
-        img: '/product2.jpg',
+        img: '/product6.png',
+        color: '#d9ad89',
         rating: 4.5
       },
       {
@@ -131,7 +137,8 @@ interface Product {
         name: 'Air Cocoon',
         collection: 'Weekend Collection',
         price: '₹37,000',
-        img: '/product2.jpg',
+        img: '/product6.png',
+        color: '#d9ad89',
         rating: 4.5
       },
       {
@@ -148,7 +155,8 @@ interface Product {
         name: 'Air Cocoon',
         collection: 'Weekend Collection',
         price: '₹37,000',
-        img: '/product2.jpg',
+        img: '/product6.png',
+        color: '#d9ad89',
         rating: 4.5
       },
       {
@@ -165,7 +173,8 @@ interface Product {
         name: 'Air Cocoon',
         collection: 'Weekend Collection',
         price: '₹37,000',
-        img: '/product2.jpg',
+        img: '/product6.png',
+        color: '#d9ad89',
         rating: 4.5
       }
     ],
