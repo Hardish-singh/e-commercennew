@@ -59,7 +59,7 @@ const ProductPage = () => {
         </div>
 
         {/* Product Details */}
-        <div className="absolute z-50  right-0 sm:top-1/2 top-[95%] h-[60%] w-screen  transform -translate-y-1/2 
+        <div className="absolute sm:z-0 z-50  right-0 sm:top-1/2 top-[95%] h-[60%] w-screen  transform -translate-y-1/2 
   bg-white/5 backdrop-blur-sm sm:p-8 p-0 rounded-bl-4xl rounded-tl-4xl 
   sm:w-[600px] sm:h-screen border-l border-white/5 overflow-y-auto  ">
 
@@ -72,7 +72,7 @@ const ProductPage = () => {
       <p className="text-sm text-gray-300 mt-1">{product.collection} Collection</p>
     </div>
 
-    <div className="hidden sm:flex items-center gap-2">
+    <div className=" sm:flex items-center gap-2">
   <div className="flex">
     {[...Array(5)].map((_, i) => (
       <Star
