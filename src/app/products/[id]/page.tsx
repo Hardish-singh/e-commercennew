@@ -37,12 +37,12 @@ const ProductPage = () => {
 
   return (
     <section>
-      <div
+      <div 
         className=" bg-black relative w-full h-screen overflow-hidden"
         // style={{ backgroundColor: product.color || '#e0e0e0' }}
       >
         {/* Favorite Button */}
-        <button className="absolute sm:top-[20%] top-[5%] sm:right-[60%] right-[10%] z-10 p-2 bg-white/10 rounded-full shadow-lg">
+        <button  className="absolute sm:top-[23%] top-[20%]  sm:right-[60%] right-[10%] z-10 p-2 bg-white/10 rounded-full shadow-lg">
           <svg className="w-6 h-6 font-bold text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
           </svg>
