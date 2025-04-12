@@ -38,12 +38,12 @@ const ProductPage = () => {
   return (
     <section>
       <div 
-        className=" bg-black relative w-full h-screen overflow-hidden"
+        className=" relative w-full h-screen overflow-hidden"
         // style={{ backgroundColor: product.color || '#e0e0e0' }}
       >
         {/* Favorite Button */}
         <button  className="absolute sm:top-[23%] top-[20%]  sm:right-[60%] right-[10%] z-10 p-2 bg-white/10 rounded-full shadow-lg">
-          <svg className="w-6 h-6 font-bold text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-6 h-6 font-bold " fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
           </svg>
         </button>
@@ -65,11 +65,11 @@ const ProductPage = () => {
 
 
 
-  <div className=" sm:space-y-6 space-y-1 text-white sm:mt-20 ml-5">
+  <div className=" sm:space-y-6 space-y-1  sm:mt-20 ml-5">
     {/* Content remains the same as in your code snippet */}
     <div>
       <h2 className="text-2xl font-bold mt-3">{product.name}</h2>
-      <p className="text-sm text-gray-300 mt-1">{product.collection} Collection</p>
+      <p className="text-sm  mt-1">{product.collection} Collection</p>
     </div>
 
     <div className=" sm:flex items-center gap-2">
@@ -103,7 +103,7 @@ const ProductPage = () => {
 
 
     <div className="space-y-4  ">
-      <button className="  relative sm:left-0 left-45 sm:w-full w-[40%]  py-4 bg-white text-black rounded-full font-semibold hover:bg-opacity-90 transition-all">
+      <button className="  relative sm:left-0 left-45 sm:w-full w-[40%]  py-4   rounded-full font-semibold hover:bg-opacity-90 transition-all">
         Add to Cart
       </button>
       <button className=" hidden sm:block  py-4 border border-white/30 relative sm:left-0 left-45 sm:w-full w-[40%] rounded-full font-semibold hover:bg-white/10 transition-all">
@@ -115,22 +115,22 @@ const ProductPage = () => {
       </div>
       <div className='flex sm:flex-row flex-col justify-center items-center gap-4  sm:justify-around mt-4 mb-4'>
 
-      <div className="flex flex-col items-center sm:w-[20%] w-[50%] text-center space-y-4 p-6 bg-[#1a1a1a] rounded-lg">
+      <div className="flex flex-col items-center sm:w-[20%] w-[50%] text-center space-y-4 p-6  rounded-lg">
     <TrendingUp className="w-10 h-10 text-[#84E12E]" />
-    <h3 className="text-xl font-bold text-white">Trending Styles</h3>
-    <p className="text-gray-600">from Top Brands</p>
+    <h3 className="text-xl font-bold ">Trending Styles</h3>
+    <p className="">from Top Brands</p>
   </div>
   
-  <div className="flex flex-col items-center text-center sm:w-[20%] w-[50%] space-y-4 p-6 bg-[#1a1a1a] rounded-lg">
+  <div className="flex flex-col items-center text-center sm:w-[20%] w-[50%] space-y-4 p-6  rounded-lg">
     <Tag className="w-10 h-10 text-[#84E12E]" />
-    <h3 className="text-xl font-bold text-white">Best Prices</h3>
-    <p className="text-gray-600">on Top Products</p>
+    <h3 className="text-xl font-bold ">Best Prices</h3>
+    <p className="">on Top Products</p>
   </div>
   
-  <div className="flex flex-col items-center text-center sm:w-[20%] w-[50%] space-y-4 p-6 bg-[#1a1a1a] rounded-lg">
+  <div className="flex flex-col items-center text-center sm:w-[20%] w-[50%] space-y-4 p-6  rounded-lg">
     <RefreshCw className="w-10 h-10 text-[#84E12E]" />
-    <h3 className="text-xl font-bold text-white">Easy Returns</h3>
-    <p className="text-gray-600">on every order</p>
+    <h3 className="text-xl font-bold ">Easy Returns</h3>
+    <p className="">on every order</p>
   </div>
       </div>
 

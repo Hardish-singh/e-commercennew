@@ -62,7 +62,7 @@ Discover. Inspire. Express.`,
     <div>
 
     {/* <Navbar/> */}
-    <div className="min-h-screen bg-black text-white font-sans">
+    <div className="min-h-screen     font-sans">
 
 <motion.section 
         initial="hidden"
@@ -138,7 +138,7 @@ Discover. Inspire. Express.`,
             <p className="text-lg text-black font-semibold mb-4">
               Dr. Anjali Srivastava - Storyteller, Visionary, and Creative Force
             </p>
-            <p className="text-gray-300">
+            <p >
               From heartfelt poems to social media sensations, Anjali's words have always connected souls. 
               Her journey from digital screens to tangible creations birthed The Hidden Stuff - where every 
               stitch carries a story.
@@ -212,7 +212,7 @@ Discover. Inspire. Express.`,
                       <motion.p
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
-                        className="text-gray-300 text-lg md:text-xl leading-relaxed"
+                        className=" text-lg md:text-xl leading-relaxed"
                         >
                         {section.content}
                       </motion.p>
@@ -233,29 +233,29 @@ Discover. Inspire. Express.`,
           >
           <motion.div 
             whileHover={{ y: -10 }}
-            className="p-6 bg-[#1a1a1a] rounded-2xl border border-[#7DC23B]"
+            className="p-6  rounded-2xl border border-[#7DC23B]"
             >
             <Shirt className="w-12 h-12 text-[#84E12E] mb-4" />
             <h3 className="text-xl font-semibold mb-2">Wearable Art</h3>
-            <p className="text-gray-300">Each piece tells a unique story through design</p>
+            <p className="">Each piece tells a unique story through design</p>
           </motion.div>
 
           <motion.div 
             whileHover={{ y: -10 }}
-            className="p-6 bg-[#1a1a1a] rounded-2xl border border-[#7DC23B]"
+            className="p-6  rounded-2xl border border-[#7DC23B]"
             >
             <Sparkles className="w-12 h-12 text-[#84E12E] mb-4" />
             <h3 className="text-xl font-semibold mb-2">Premium Quality</h3>
-            <p className="text-gray-300">Crafted with care for lasting comfort</p>
+            <p className="">Crafted with care for lasting comfort</p>
           </motion.div>
 
           <motion.div 
             whileHover={{ y: -10 }}
-            className="p-6 bg-[#1a1a1a] rounded-2xl border border-[#7DC23B]"
+            className="p-6  rounded-2xl border border-[#7DC23B]"
             >
             <HeartHandshake className="w-12 h-12 text-[#84E12E] mb-4" />
             <h3 className="text-xl font-semibold mb-2">Community First</h3>
-            <p className="text-gray-300">Join our movement of self-expression</p>
+            <p className="">Join our movement of self-expression</p>
           </motion.div>
         </motion.div>
       </div>
@@ -283,7 +283,7 @@ Discover. Inspire. Express.`,
               Our Mission
             </h2>
           </div>
-          <p className="text-xl text-gray-300">
+          <p className="text-xl ">
             Transforming everyday apparel into powerful mediums of self-expression, 
             helping you wear your story and celebrate individuality
           </p>

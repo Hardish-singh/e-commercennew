@@ -60,7 +60,7 @@ export default function MenProducts() {
               }`}
           >
             <div className="flex flex-row items-center justify-between h-full px-8">
-              <div className="text-white z-10">
+              <div className=" z-10">
                 <h2 className="text-lg sm:text-6xl md:text-6xl font-bold">
                   {item.title}
                 </h2>
@@ -93,7 +93,7 @@ export default function MenProducts() {
         <div className="absolute right-[5%]  ">
           <button
             onClick={() => setIsFiltersOpen(!isFiltersOpen)}
-            className="   flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 rounded-lg hover:border-[#8FC028] transition-all"
+            className="   flex items-center gap-2 px-4 py-2  border border-gray-300 rounded-lg hover:border-[#8FC028] transition-all"
           >
             <Filter className="text-[#8FC028]" size={18} />
             <span className="text-[#8FC028]">Filters</span>
@@ -105,10 +105,10 @@ export default function MenProducts() {
           </button>
 
           {isFiltersOpen && (
-            <div className="absolute right-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-10">
+            <div className="absolute right-0 mt-2 w-56  border bg-[#8FC028] border-gray-200 rounded-lg shadow-lg p-4 z-10">
               {/* Budget Filter */}
               <div className="space-y-2 mb-4">
-                <h3 className="font-semibold text-black">Max Budget ($)</h3>
+                <h3 className="font-semibold ">Max Budget ($)</h3>
                 <input
                   type="number"
                   placeholder="Enter max price"
@@ -121,7 +121,7 @@ export default function MenProducts() {
               {/* Color Filter */}
               {availableColors.length > 0 && (
                 <div className="space-y-2 mb-4">
-                  <h3 className="font-semibold text-black">Colors</h3>
+                  <h3 className="font-semibold ">Colors</h3>
                   <div className="flex flex-wrap gap-2">
                     {availableColors.map(color => (
                       <button
@@ -144,7 +144,7 @@ export default function MenProducts() {
 
               {/* Rating Filter */}
               <div className="space-y-2">
-                <h3 className="font-semibold text-black">Minimum Rating</h3>
+                <h3 className="font-semibold ">Minimum Rating</h3>
                 <div className="flex flex-col gap-2">
                   {[4, 3, 2, 1].map(rating => (
                     <button
@@ -213,10 +213,10 @@ export default function MenProducts() {
                 className="absolute object-cover object-bottom scale-110 rounded-xl"
               />
             </div>
-            <div className="text-gray-900 text-xs sm:text-sm font-semibold mt-2 line-clamp-1">
+            <div className=" text-xs sm:text-sm font-semibold mt-2 line-clamp-1">
               {item.name}
             </div>
-            <div className="text-gray-500 text-[10px] sm:text-xs line-clamp-1">
+            <div className=" text-[10px] sm:text-xs line-clamp-1">
               {item.collection}
             </div>
             <div className="text-[#84E12E] font-bold text-xs sm:text-sm mt-1">
@@ -234,7 +234,7 @@ export default function MenProducts() {
             <div className="flex justify-between mt-3 gap-2">
               <button onClick={() => {
                 router.push(`/products/${item.id}`)
-              }} className="flex-1 bg-[#7DC23B] text-white text-[10px] sm:text-xs py-3 px-4 rounded-xl hover:bg-emerald-700 transition-all">
+              }} className="flex-1 bg-[#7DC23B]  text-[10px] sm:text-xs py-3 px-4 rounded-xl hover:bg-emerald-700 transition-all">
                 Buy
               </button>
               <button className="flex-1 border border-[#7DC23B]  text-[#7DC23B]  text-[10px] sm:text-xs py-3 px-4 rounded-xl hover:border-emerald-600 hover:text-emerald-700 transition-all">
@@ -250,7 +250,7 @@ export default function MenProducts() {
 
 
       {filteredProducts.length === 0 && (
-        <div className="text-center py-12 text-gray-500">
+        <div className="text-center py-12 ">
           No products found matching your criteria
         </div>
       )}

@@ -36,7 +36,7 @@ const FeaturesSection = () => {
       
             Our Services
           </h1>
-          <p className="text-lg text-gray-300">
+          <p className="text-lg ">
             Quality services for seamless shopping
           </p>
         </div>
@@ -66,7 +66,7 @@ const FeaturesSection = () => {
                     <h3 className="text-xl font-semibold text-[#8FC028]">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-300 leading-relaxed">
+                    <p className=" leading-relaxed">
                       {feature.description}
                     </p>
                   </div>

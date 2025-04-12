@@ -14,7 +14,7 @@ const categories = [
 
 const Categories = () => {
   return (
-    <section className="w-full bg-black py-8 px-4">
+    <section className="w-full  py-8 px-4">
       {/* Heading */}
       <div className="text-center mb-8">
         {/* Mobile Heading */}
@@ -55,7 +55,7 @@ const Categories = () => {
             </div>
             
             {/* Category Name */}
-            <span className="text-white text-lg md:text-xl font-medium transition-colors
+            <span className=" text-lg md:text-xl font-medium transition-colors
               group-hover:text-[#8FC028]">
               {category.name}
             </span>
@@ -64,7 +64,7 @@ const Categories = () => {
       </div>
 
       {/* Scroll Indicator for Mobile */}
-      <div className="md:hidden text-center text-white/50 text-sm mt-4">
+      <div className="md:hidden text-center  text-sm mt-4">
         Swipe to explore categories
       </div>
     </section>

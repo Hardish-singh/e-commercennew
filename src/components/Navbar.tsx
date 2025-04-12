@@ -16,6 +16,7 @@ import {
   Users,
 } from 'lucide-react';
 import Image from 'next/image';
+import { ThemeToggle } from './ThemeToggler';
 
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -43,18 +44,18 @@ const Navbar = () => {
   return (
     <>
       {transitioning && (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black text-white text-4xl font-bold animate-slideLeft pointer-events-none">
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center   text-4xl font-bold animate-slideLeft pointer-events-none">
           {pageName}
         </div>
       )}
 
-      <nav className="fixed top-0 left-0 w-full sm:h-20 z-50  bg-white/5 backdrop-blur-xs text-white px-6 py-4 flex items-center justify-between md:justify-start">
+      <nav className="fixed top-0 left-0 w-full sm:h-20 z-50  bg-white/5 backdrop-blur-xs  px-6 py-4 flex items-center justify-between md:justify-start">
         <div className="text-2xl font-bold md:mr-auto w-full md:w-auto text-center flex items-center justify-center md:text-left">
           <Image src="/logo2.png" alt="Hero Image" width={170} height={80} className="object-cover sm:w-40 w-32" />
         </div>
 
         {/* Center Icons */}
-        <ul className="hidden md:flex sm:gap-12 md:gap-8 space-x-6 text-white text-lg mx-auto relative">
+        <ul className="hidden md:flex sm:gap-12 md:gap-8 space-x-6  text-lg mx-auto relative">
           <li onClick={(e) => handleTransition('/', 'Home', e)} className="hover:text-gray-300 cursor-pointer">
             <Home size={25} />
           </li>
@@ -94,7 +95,8 @@ const Navbar = () => {
         </ul>
 
         {/* Right Icons */}
-        <ul className="hidden md:flex space-x-6 sm:gap-3 md:gap-1 text-white text-lg ml-auto">
+        <ul className="hidden md:flex space-x-6 sm:gap-3 md:gap-1  text-lg ml-auto">
+          <ThemeToggle/>
           <li className="hover:text-gray-300 cursor-pointer"><Heart size={25} /></li>
           <li className="hover:text-gray-300 cursor-pointer"><ShoppingCart size={25} /></li>
           <li className="hover:text-gray-300 cursor-pointer"><User size={25} /></li>
@@ -102,7 +104,7 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Footer */}
-      <div className="fixed bottom-0 left-0 w-full bg-black/30 backdrop-blur-md text-white md:hidden flex justify-around items-center py-3 px-4 border-t border-white/10 z-50">
+      <div className="fixed bottom-0 left-0 w-full  backdrop-blur-md  md:hidden flex justify-around items-center py-3 px-4 border-t  z-50">
         <Home size={24} className="hover:text-gray-300 cursor-pointer" onClick={(e) => handleTransition('/', 'Home', e)} />
         <ShoppingCart size={24} className="hover:text-gray-300 cursor-pointer" />
         <Menu
@@ -111,12 +113,13 @@ const Navbar = () => {
           onClick={() => setShowMobileMenu(!showMobileMenu)}
         />
         <User size={24} className="hover:text-gray-300 cursor-pointer" />
-        <Heart size={24} className="hover:text-gray-300 cursor-pointer" />
+        <ThemeToggle/>
+        
       </div>
 
       {/* Mobile Menu Dropdown */}
       <div
-        className={`fixed bottom-16 left-4 right-4 bg-white/10 backdrop-blur-md text-white rounded-xl py-4 px-6 z-50 space-y-3 text-center shadow-lg transform transition-all duration-300 ease-in-out ${
+        className={`fixed bottom-16 left-4 right-4 bg-white/10 backdrop-blur-md  rounded-xl py-4 px-6 z-50 space-y-3 text-center shadow-lg transform transition-all duration-300 ease-in-out ${
           showMobileMenu ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0 pointer-events-none'
         }`}
       >
@@ -134,6 +137,9 @@ const Navbar = () => {
         </div>
         <div onClick={(e) => handleTransition('/contact', 'Contact', e)} className="cursor-pointer hover:text-gray-300 flex items-center justify-center space-x-2">
           <Phone size={20} /> <span>Contact</span>
+        </div>
+        <div onClick={(e) => handleTransition('/contact', 'Contact', e)} className="cursor-pointer hover:text-gray-300 flex items-center justify-center space-x-2">
+        <Heart size={20} /> <span>Favorites</span>
         </div>
       </div>
 

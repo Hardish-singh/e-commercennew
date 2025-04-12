@@ -27,7 +27,7 @@ const About = () => {
 
   const router = useRouter();
   return (
-    <section className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-6 py-16">
+    <section className="min-h-screen   flex flex-col items-center justify-center px-6 py-16">
       
     
       <motion.h1
@@ -41,7 +41,7 @@ const About = () => {
 
      
       <motion.p
-        className="text-gray-300 mt-4 text-center max-w-xl"
+        className=" mt-4 text-center max-w-xl"
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.8 }}
@@ -55,7 +55,7 @@ const About = () => {
         {features.map((feat, i) => (
           <motion.div
             key={i}
-            className="bg-[#1a1a1a] border border-[#84E12E] rounded-2xl p-6 flex flex-col items-center text-center shadow-lg"
+            className=" border border-[#84E12E] rounded-2xl p-6 flex flex-col items-center text-center shadow-lg"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.2, duration: 0.6 }}
@@ -63,7 +63,7 @@ const About = () => {
           >
             <div className="mb-4">{feat.icon}</div>
             <h3 className="font-semibold text-lg text-[#8FC028]">{feat.title}</h3>
-            <p className="text-sm text-gray-400 mt-2">{feat.desc}</p>
+            <p className="text-sm  mt-2">{feat.desc}</p>
           </motion.div>
         ))}
       </div>

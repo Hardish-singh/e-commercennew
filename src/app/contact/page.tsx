@@ -28,11 +28,11 @@ const ContactPage = () => {
   return (
     <>
     {/* <Navbar/> */}
-      <Head>
+      {/* <Head>
         <title>Contact Us</title>
-      </Head>
+      </Head> */}
       
-      <div className="min-h-screen bg-black text-white">
+      <div className="min-h-screen  ">
        
         <motion.div
           initial={{ opacity: 0, y: -50 }}
@@ -40,7 +40,7 @@ const ContactPage = () => {
           transition={{ duration: 0.8 }}
           className="pt-16 pb-12 text-center"
         >
-          <h1 className="text-4xl md:text-6xl font-bold  bg-clip-text text-[#8FC028]">
+          <h1 className="text-4xl md:text-6xl font-bold mt-10  bg-clip-text text-[#8FC028] ">
             Get In Touch
           </h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg opacity-90">
@@ -65,7 +65,7 @@ const ContactPage = () => {
                 <input
                   type="text"
                   id="name"
-                  className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
+                  className="w-full text-gray-400   border border-gray-700 rounded-lg px-4 py-3 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
                   placeholder="rohit"
                 />
               </div>
@@ -75,7 +75,7 @@ const ContactPage = () => {
                 <input
                   type="email"
                   id="email"
-                  className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
+                  className="w-full text-gray-400  border border-gray-700 rounded-lg px-4 py-3 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
                   placeholder="you@rohit.com"
                 />
               </div>
@@ -85,7 +85,7 @@ const ContactPage = () => {
                 <textarea
                   id="message"
                   rows={5}
-                  className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
+                  className="w-full text-gray-400  border border-gray-700 rounded-lg px-4 py-3 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
                   placeholder="What would you like to say?"
                 ></textarea>
               </div>
@@ -93,7 +93,7 @@ const ContactPage = () => {
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full text-black bg-[#7DC23B] font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-yellow-500/30 transition-all"
+                className="w-full  bg-[#7DC23B] font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-yellow-500/30 transition-all"
                 type="submit"
               >
                 Send Message
@@ -111,12 +111,12 @@ const ContactPage = () => {
                 whileHover={{ x: 5 }}
                 className="flex items-start gap-4"
               >
-                <div className="p-2 bg-gray-900 rounded-full">
+                <div className="p-2  rounded-full">
                   <Mail className="h-5 w-5 text-[#84E12E]" />
                 </div>
                 <div>
                   <h3 className="font-medium text-[#8FC028]">Email</h3>
-                  <p className="text-gray-300">contact@thehiddenstuff.com</p>
+                  <p className="">contact@thehiddenstuff.com</p>
                 </div>
               </motion.div>
               
@@ -125,12 +125,12 @@ const ContactPage = () => {
                 whileHover={{ x: 5 }}
                 className="flex items-start gap-4"
               >
-                <div className="p-2 bg-gray-900 rounded-full">
+                <div className="p-2  rounded-full">
                   <Phone className="h-5 w-5 text-[#84E12E]" />
                 </div>
                 <div>
                   <h3 className="font-medium text-[#8FC028]">Phone</h3>
-                  <p className="text-gray-300">+1 (555) 123-4567</p>
+                  <p className="">+1 (555) 123-4567</p>
                 </div>
               </motion.div>
               
@@ -139,13 +139,13 @@ const ContactPage = () => {
                 whileHover={{ x: 5 }}
                 className="flex items-start gap-4"
               >
-                <div className="p-2 bg-gray-900 rounded-full">
+                <div className="p-2  rounded-full">
                   <MapPin className="h-5 w-5 text-[#84E12E]" />
                 </div>
                 <div>
                   <h3 className="font-medium text-[#8FC028]">Address</h3>
-                  <p className="text-gray-300">123 Fashion Street</p>
-                  <p className="text-gray-300">Ranchi, Jarkhand 10001</p>
+                  <p className="">123 Fashion Street</p>
+                  <p className="">Ranchi, Jarkhand 10001</p>
                 </div>
               </motion.div>
             </div>
@@ -160,7 +160,7 @@ const ContactPage = () => {
                     whileHover={{ y: -3 }}
                     whileTap={{ scale: 0.95 }}
                     href="#"
-                    className="bg-gray-900 hover:bg-gray-800 px-4 py-2 rounded-lg transition-all"
+                    className=" hover:bg-gray-800 px-4 py-2 rounded-lg transition-all"
                   >
                     {social}
                   </motion.a>

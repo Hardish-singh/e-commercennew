@@ -78,7 +78,7 @@ const SearchBar = () => {
             handleSearch();
             setShowResults(true);
           }}
-          className=" text-black w-full px-4 py-3 pr-10 rounded-lg border border-gray-300 focus:border-[#8FC028] focus:ring-2 focus:ring-[#8FC028]/50 transition-all duration-300 bg-white shadow-sm"
+          className=" text-gray-800  w-full px-4 py-3 pr-10 rounded-lg border border-gray-300 focus:border-[#8FC028] focus:ring-2 focus:ring-[#8FC028]/50 transition-all duration-300 bg-white shadow-sm"
         />
         
         <div className="absolute right-3 top-1/2 -translate-y-1/2">
@@ -88,21 +88,21 @@ const SearchBar = () => {
                 setSearchQuery('');
                 setShowResults(false);
               }}
-              className="text-gray-400 hover:text-red-500 transition-colors"
+              className=" hover:text-red-500 transition-colors"
             >
               <X size={20} />
             </button>
           ) : (
-            <Search size={20} className="text-gray-400" />
+            <Search size={20} className="" />
           )}
         </div>
       </div>
 
       {/* Search Results */}
       {showResults && (
-        <div className="absolute z-10 mt-2 w-full bg-white rounded-lg shadow-xl max-h-[60vh] overflow-y-auto">
+        <div className="absolute z-10 mt-2 w-full bg-gray-100   rounded-lg shadow-xl max-h-[60vh] overflow-y-auto">
           {isSearching ? (
-            <div className="p-4 text-gray-500">Searching...</div>
+            <div className="p-4 ">Searching...</div>
           ) : filteredProducts.length > 0 ? (
             <div className="divide-y divide-gray-100">
               {filteredProducts.map((product) => (
@@ -117,10 +117,10 @@ const SearchBar = () => {
                     className="w-16 h-16 object-contain rounded-lg"
                   />
                   <div className="ml-4 flex-1">
-                    <h3 className="font-medium text-gray-900 group-hover:text-[#8FC028] transition-colors">
+                    <h3 className="font-medium text-gray-600  group-hover:text-[#8FC028] transition-colors">
                       {product.name}
                     </h3>
-                    <p className="text-sm text-gray-500">{product.collection}</p>
+                    <p className="text-sm  text-black">{product.collection}</p>
                     {/* <p className="text-sm text-gray-500 mt-1 line-clamp-2">
                       {product.description}
                     </p> */}
@@ -132,7 +132,7 @@ const SearchBar = () => {
               ))}
             </div>
           ) : (
-            <div className="p-4 text-gray-500">No products found</div>
+            <div className="p-4 ">No products found</div>
           )}
         </div>
       )}

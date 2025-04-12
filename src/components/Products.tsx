@@ -42,7 +42,7 @@ const Products = () => {
 
     const renderSlider = (title: string, data: typeof products.women, type: 'women' | 'men') => (
         <div className="relative mb-10">
-            <div className="flex justify-center items-center px-4 md:px-8 text-white">
+            <div className="flex justify-center items-center px-4 md:px-8 ">
                 <h2 className="text-xl md:text-5xl font-bold text-center text-[#8FC028]  ">{title}</h2>
             </div>
             <button className="text-[#84E12E] absolute right-4 text-sm">Show All</button>
@@ -75,7 +75,7 @@ const Products = () => {
                                     style={{ backgroundColor: item.color || '#e0e0e0' }}
                                 >
                                     {/* Hot Deal Icon */}
-                                    <div className="absolute top-2 right-2 z-10 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full flex items-center gap-1">
+                                    <div className="absolute top-2 right-2 z-10 bg-red-500  text-xs font-bold px-2 py-1 rounded-full flex items-center gap-1">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             className="h-4 w-4"
@@ -94,9 +94,9 @@ const Products = () => {
                                         className="absolute object-cover object-bottom scale-110 rounded-xl"
                                     />
                                 </div>
-                                <div className="text-white font-semibold mt-2">{item.name}</div>
-                                <div className="text-gray-400 text-sm">{item.collection}</div>
-                                <div className="text-white mt-1">{item.price}</div>
+                                <div className=" font-semibold mt-2">{item.name}</div>
+                                <div className=" text-sm">{item.collection}</div>
+                                <div className=" mt-1">{item.price}</div>
                             </div>
                         );
                     })}
@@ -106,7 +106,7 @@ const Products = () => {
     );
 
     return (
-        <section className="bg-black py-8">
+        <section className=" py-8">
             {renderSlider('Popular - Products', products.women, 'women')}
             {renderSlider('', products.men, 'men')}
         </section>
