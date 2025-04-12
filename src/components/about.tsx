@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shirt, Sparkles, SmilePlus, ArrowRight } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 const features = [
   {
@@ -23,6 +24,8 @@ const features = [
 ];
 
 const About = () => {
+
+  const router = useRouter();
   return (
     <section className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-6 py-16">
       
@@ -67,6 +70,9 @@ const About = () => {
 
    
       <motion.button
+      onClick={()=>{
+        router.push(`/about`)
+      }}
         className="mt-12 bg-[#7DC23B] hover:bg-[#84E12E] text-black font-semibold px-6 py-3 rounded-full flex items-center gap-2 transition-all"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}

@@ -65,8 +65,11 @@ const Navbar = () => {
           {/* Product Dropdown */}
           <li className="relative">
             <div
-              onClick={() => setShowProductDropdown(!showProductDropdown)}
+              onMouseEnter={() => setShowProductDropdown(!showProductDropdown)}
               className="hover:text-gray-300 cursor-pointer"
+              onClick={() => setShowProductDropdown(!showProductDropdown)}
+              // onMouseLeave={() => setShowProductDropdown(!showProductDropdown)}
+             
             >
               <Package size={25} />
             </div>

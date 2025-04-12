@@ -185,7 +185,7 @@ interface Product {
         collection: 'Urban Collection',
         price: '₹27,000',
         img: '/product3.png',
-        color: '#FFBB00',
+        color: '#84E12E',
         rating: 4.3
       },
       {
@@ -203,7 +203,7 @@ interface Product {
         collection: 'Urban Collection',
         price: '₹27,000',
         img: '/product3.png',
-        color: '#FFBB00',
+        color: '#84E12E',
         rating: 4.3
       },
       {
@@ -221,7 +221,7 @@ interface Product {
         collection: 'Urban Collection',
         price: '₹27,000',
         img: '/product3.png',
-        color: '#FFBB00',
+        color: '#84E12E',
         rating: 4.3
       },
       {
@@ -239,7 +239,7 @@ interface Product {
         collection: 'Urban Collection',
         price: '₹27,000',
         img: '/product3.png',
-        color: '#FFBB00',
+        color: '#84E12E',
         rating: 4.3
       },
       {
@@ -257,7 +257,7 @@ interface Product {
         collection: 'Urban Collection',
         price: '₹27,000',
         img: '/product3.png',
-        color: '#FFBB00',
+        color: '#84E12E',
         rating: 4.3
       },
       {
@@ -275,7 +275,7 @@ interface Product {
         collection: 'Urban Collection',
         price: '₹27,000',
         img: '/product3.png',
-        color: '#FFBB00',
+        color: '#84E12E',
         rating: 4.3
       },
       {
@@ -293,7 +293,7 @@ interface Product {
         collection: 'Urban Collection',
         price: '₹27,000',
         img: '/product3.png',
-        color: '#FFBB00',
+        color: '#84E12E',
         rating: 4.3
       },
       {
@@ -311,7 +311,7 @@ interface Product {
         collection: 'Urban Collection',
         price: '₹27,000',
         img: '/product3.png',
-        color: '#FFBB00',
+        color: '#84E12E',
         rating: 4.3
       },
       {
@@ -329,7 +329,7 @@ interface Product {
         collection: 'Urban Collection',
         price: '₹27,000',
         img: '/product3.png',
-        color: '#FFBB00',
+        color: '#84E12E',
         rating: 4.3
       },
       {

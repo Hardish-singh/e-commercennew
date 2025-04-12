@@ -2,11 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
 const features = [
   {
     id: 1,
-    bgimageUrl: '/luffy2.jpg',
+    bgimageUrl: '/luffy.jpg',
     mainimageUrl: '/img1.png',
     title: 'Luffy',
     coltitle: 'Oversized',
@@ -83,7 +84,7 @@ const Hero = () => {
     animate: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: 'easeInOut' } },
     exit: { opacity: 0, scale: 1.05, transition: { duration: 0.6, ease: 'easeInOut' } },
   };
-
+  const router =useRouter();
   return (
     <div className="relative w-full h-screen overflow-hidden">
       <AnimatePresence mode="wait">
@@ -143,7 +144,9 @@ const Hero = () => {
             <p className="text-sm md:text-base text-white font-medium mt-2 max-w-[300px] md:max-w-sm">
               {desc}
             </p>
-            <button className="w-full sm:w-50 md:w-40 px-7 py-4 rounded-2xl bg-[#7DC23B] text-white font-semibold text-base md:text-xl mt-4">
+            <button onClick={()=>{
+                                router.push(`/products/men`)
+                              }} className="w-full sm:w-50 md:w-40 px-7 py-4 rounded-2xl bg-[#7DC23B] text-white font-semibold text-base md:text-xl mt-4">
   View
 </button>
 
