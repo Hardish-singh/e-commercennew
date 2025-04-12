@@ -4,7 +4,7 @@ import { Heart,  Star, StarOff } from "lucide-react";
 import products from "../../../../lib/Products";
 import { useRouter } from "next/navigation";
 import { useEffect,useState } from "react";
-import Navbar from "@/components/Navbar";
+// import Navbar from "@/components/Navbar";
 
 export default function MenProducts() {
    const router = useRouter();
@@ -32,7 +32,7 @@ export default function MenProducts() {
    
      return (
       <>
-     <Navbar/>
+     {/* <Navbar/> */}
        <div className="px-2 sm:px-4 md:px-8 py-6 mt-14">
          {/* Carousel Section */}
          <div className="relative w-full h-[150px] sm:h-[250px] mb-5 rounded-3xl overflow-hidden">

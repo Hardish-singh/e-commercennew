@@ -3,7 +3,7 @@ import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 import Image from "next/image";
 import { User2Icon, ChevronDown, Sparkles, PenLine, BookOpenText, Shirt, HeartHandshake } from "lucide-react";
 import { useState } from "react";
-import Navbar from "@/components/Navbar";
+// import Navbar from "@/components/Navbar";
 
 const AboutPage = () => {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
@@ -61,7 +61,7 @@ Discover. Inspire. Express.`,
   return (
     <div>
 
-    <Navbar/>
+    {/* <Navbar/> */}
     <div className="min-h-screen bg-black text-white font-sans">
 
 <motion.section 

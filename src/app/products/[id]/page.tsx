@@ -59,7 +59,7 @@ const ProductPage = () => {
         </div>
 
         {/* Product Details */}
-        <div className="sm:absolute  fixed right-0 sm:top-1/2 top-[95%] h-[60%] w-screen  transform -translate-y-1/2 
+        <div className="sm:absolute z-50  fixed right-0 sm:top-1/2 top-[95%] h-[60%] w-screen  transform -translate-y-1/2 
   bg-white/5 backdrop-blur-sm sm:p-8 p-0 rounded-bl-4xl rounded-tl-4xl 
   sm:w-[600px] sm:h-screen border-l border-white/5 overflow-y-auto  ">
 
@@ -102,8 +102,8 @@ const ProductPage = () => {
 </div>
 
 
-    <div className="space-y-4 z-50 ">
-      <button className=" relative sm:left-0 left-45 sm:w-full w-[40%]  py-4 bg-white text-black rounded-full font-semibold hover:bg-opacity-90 transition-all">
+    <div className="space-y-4  ">
+      <button className=" hidden sm:block relative sm:left-0 left-45 sm:w-full w-[40%]  py-4 bg-white text-black rounded-full font-semibold hover:bg-opacity-90 transition-all">
         Add to Cart
       </button>
       <button className="  py-4 border border-white/30 relative sm:left-0 left-45 sm:w-full w-[40%] rounded-full font-semibold hover:bg-white/10 transition-all">
@@ -111,7 +111,7 @@ const ProductPage = () => {
       </button>
     </div>
   </div>
-</div>
+</div >
       </div>
       <div className='flex sm:flex-row flex-col justify-center items-center gap-4  sm:justify-around mt-4 mb-4'>
 
