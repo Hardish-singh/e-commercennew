@@ -102,11 +102,11 @@ const ProductPage = () => {
 </div>
 
 
-    <div className="space-y-4 ">
+    <div className="space-y-4 z-50 ">
       <button className=" relative sm:left-0 left-45 sm:w-full w-[40%]  py-4 bg-white text-black rounded-full font-semibold hover:bg-opacity-90 transition-all">
         Add to Cart
       </button>
-      <button className="w-full py-4 border border-white/30 rounded-full font-semibold hover:bg-white/10 transition-all">
+      <button className="  py-4 border border-white/30 relative sm:left-0 left-45 sm:w-full w-[40%] rounded-full font-semibold hover:bg-white/10 transition-all">
         Add to Wishlist
       </button>
     </div>
