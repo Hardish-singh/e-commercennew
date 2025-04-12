@@ -38,7 +38,7 @@ const ProductPage = () => {
   return (
     <section>
       <div
-        className="bg-[#8FC028] relative w-full h-screen overflow-hidden"
+        className=" bg-black relative w-full h-screen overflow-hidden"
         // style={{ backgroundColor: product.color || '#e0e0e0' }}
       >
         {/* Favorite Button */}
@@ -60,8 +60,8 @@ const ProductPage = () => {
 
         {/* Product Details */}
         <div className="absolute sm:z-0 z-50  right-0 sm:top-1/2 top-[95%] h-[60%] w-screen  transform -translate-y-1/2 
-  bg-white/5 backdrop-blur-sm sm:p-8 p-0 rounded-bl-4xl rounded-tl-4xl 
-  sm:w-[600px] sm:h-screen border-l border-white/5 overflow-y-auto  ">
+  bg-[#8FC028] backdrop-blur-sm sm:p-8 p-0 rounded-bl-4xl rounded-tl-4xl 
+  sm:w-[600px] sm:h-screen border-l border-white/30 overflow-y-auto  ">
 
 
 

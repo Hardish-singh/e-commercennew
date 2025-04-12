@@ -48,7 +48,7 @@ const Navbar = () => {
         </div>
       )}
 
-      <nav className="fixed top-0 left-0 w-full z-50 bg-transparent text-white px-6 py-4 flex items-center justify-between md:justify-start">
+      <nav className="fixed top-0 left-0 w-full sm:h-20 z-50  bg-white/5 backdrop-blur-xs text-white px-6 py-4 flex items-center justify-between md:justify-start">
         <div className="text-2xl font-bold md:mr-auto w-full md:w-auto text-center flex items-center justify-center md:text-left">
           <Image src="/logo2.png" alt="Hero Image" width={170} height={80} className="object-cover sm:w-40 w-32" />
         </div>
