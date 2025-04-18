@@ -5,8 +5,8 @@ import Navbar from "@/components/Navbar";
 import Products from "@/components/Products";
 import SearchBar from "@/components/SearchBar";
 import About from "@/components/about";
-import FeaturesSection from "@/components/featuresection";
-// import Photo from "@/components/photos";
+// import FeaturesSection from "@/components/featuresection";
+// // import Photo from "@/components/photos";
 export default function Home() {
   return (
     <div>
@@ -16,8 +16,8 @@ export default function Home() {
      <Categories/>
      <SearchBar/>
      <Products/>
-     <About/>
-     <FeaturesSection/>
+     {/* <About/>
+     <FeaturesSection/> */}
     </div>
     
   );
